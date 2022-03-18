@@ -53,6 +53,7 @@ fun DataStoreInput(
 ) {
     val context = LocalContext.current
     val textState = remember { mutableStateOf(TextFieldValue()) }
+    DataStorePreferenceRepository.getInstance()
     val getUserName = viewModel.userName.observeAsState().value
     val scope = rememberCoroutineScope()
 
